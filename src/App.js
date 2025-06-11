@@ -1,8 +1,24 @@
-import logo from "./logo.svg";
 import "./App.css";
-
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import AccountPage from "./pages/AccountPage";
+import InvitationEditorPage from "./pages/InvitationEditorPage";
+import InvitationPage from "./pages/InvitationPage";
 function App() {
-  return <div className="App">깃허브 올라갔는지 확인</div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/mypage" element={<AccountPage />} />
+        <Route path="/editor" element={<InvitationEditorPage />} />
+        <Route path="/invitation/:id" element={<InvitationPage />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
