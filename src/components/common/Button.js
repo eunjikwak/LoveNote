@@ -11,6 +11,7 @@ const StyledButton = styled.button`
   color: ${palette.colors.secondary};
   outline: none;
   cursor: pointer;
+  font-family: "MaruBuri", sans-serif;
 
   background: ${({ bgcolor, theme }) => bgcolor || palette.colors.primary};
   color: ${({ textcolor }) => textcolor || palette.colors.secondary};
