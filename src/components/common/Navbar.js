@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import palette from "../../lib/styles/palette";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavContainer = styled.nav`
   display: flex;
@@ -56,14 +56,11 @@ const Menu = styled.ul`
   }
 `;
 
-const MenuItem = styled.li`
+const MenuItem = styled(Link)`
   cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
-const Navbar = () => {
+const Navbar = ({ user, onLogout }) => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   return (
@@ -77,8 +74,16 @@ const Navbar = () => {
       </MenuToggle>
 
       <Menu open={open}>
-        <MenuItem>청첩장 보기</MenuItem>
-        <MenuItem>로그아웃</MenuItem>
+        {user ? (
+          <>
+            <MenuItem to={`/${JSON.stringify(user.username)}`}>
+              청첩장 보기
+            </MenuItem>
+            <MenuItem onClick={onLogout}>로그아웃</MenuItem>
+          </>
+        ) : (
+          <MenuItem to="/login">로그인</MenuItem>
+        )}
       </Menu>
     </NavContainer>
   );

@@ -1,5 +1,16 @@
+import EditorContainer from "../container/\beditor/EditorContainer";
+import HeaderContainer from "../container/common/HeaderContainer";
+import BaseLayout from "../components/common/BaseLayout";
+
 const InvitationEditorPage = () => {
-  return <>이벤트 카드 제작 페이지</>;
+  return (
+    <>
+      <HeaderContainer />
+      <BaseLayout>
+        <EditorContainer />
+      </BaseLayout>
+    </>
+  );
 };
 
 export default InvitationEditorPage;

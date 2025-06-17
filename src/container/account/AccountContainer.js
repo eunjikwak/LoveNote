@@ -1,12 +1,12 @@
 import CardView from "../../components/account/CardView";
-import styled from "styled-components";
-import AccountTemple from "../../components/account/AccountTemplate";
+import SubTitle from "../../components/common/SubTitle";
 
 const AccountContainer = () => {
   return (
-    <AccountTemple>
+    <>
+      <SubTitle>나의 청첩장 목록</SubTitle>
       <CardView />
-    </AccountTemple>
+    </>
   );
 };
 

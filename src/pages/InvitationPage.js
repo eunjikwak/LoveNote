@@ -1,5 +1,10 @@
+import InvitationPreview from "../components/editor/InvitationPreview";
 const InvitationPage = () => {
-  return <>청첩장 페이지</>;
+  return (
+    <>
+      <InvitationPreview />
+    </>
+  );
 };
 
 export default InvitationPage;

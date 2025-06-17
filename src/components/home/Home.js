@@ -56,19 +56,25 @@ const HomeWapper = styled.div`
     }
   }
 `;
-const Home = () => {
+const Home = ({ user }) => {
   return (
     <HomeWapper>
       <img src="./logo.png" className="logo" alt="" />
       <div className="button-box">
-        <Button to="/editor">청첩장 만들기</Button>
-        <Button
-          bgcolor="#fff"
-          textcolor={palette.colors.text.default}
-          to="/login"
-        >
-          로그인하기
-        </Button>
+        {user ? (
+          <Button to="/editor">청첩장 만들기</Button>
+        ) : (
+          <Button to="/login">청첩장 만들기</Button>
+        )}
+        {!user && (
+          <Button
+            bgcolor="#fff"
+            textcolor={palette.colors.text.default}
+            to="/login"
+          >
+            로그인하기
+          </Button>
+        )}
       </div>
     </HomeWapper>
   );
