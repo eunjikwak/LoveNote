@@ -35,10 +35,10 @@ const AccordionButton = styled.button`
 `;
 
 const AccordionContent = styled.div`
-  max-height: ${({ isOpen }) => (isOpen ? "500px" : "0")};
-  overflow: ${({ isOpen }) => !isOpen && "hidden"};
+  max-height: ${({ $isOpen }) => ($isOpen ? "1500px" : "0")};
+  overflow: ${({ $isOpen }) => !$isOpen && "hidden"};
   transition: max-height 0.35s ease;
-  padding: ${({ isOpen }) => (isOpen ? "30px 20px" : "0 20px")};
+  padding: ${({ $isOpen }) => ($isOpen ? "30px 20px" : "0 20px")};
   font-size: 16px;
   background-color: #fff;
   color: #333;
@@ -50,7 +50,7 @@ const AccordionContent = styled.div`
 
 const Icon = styled.span`
   transition: transform 0.3s ease;
-  transform: ${({ isOpen }) => (isOpen ? "rotate(180deg)" : "rotate(0deg)")};
+  transform: ${({ $isOpen }) => ($isOpen ? "rotate(180deg)" : "rotate(0deg)")};
   font-weight: bold;
   line-height: 0;
 `;
@@ -70,15 +70,15 @@ const AccordionItem = ({ title, children }) => {
           <ToggleButton
             toggleIsOpen={toggleIsOpen}
             setToggleIsOpen={setToggleIsOpen}
-            isOpen={isOpen}
+            $isOpen={isOpen}
           />
           <span>{title}</span>
         </div>
-        <Icon isOpen={isOpen}>
+        <Icon $isOpen={isOpen}>
           <SlArrowDown />
         </Icon>
       </AccordionButton>
-      <AccordionContent isOpen={isOpen}>{children}</AccordionContent>
+      <AccordionContent $isOpen={isOpen}>{children}</AccordionContent>
     </AccordionItemBlock>
   );
 };

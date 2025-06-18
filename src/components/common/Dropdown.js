@@ -48,7 +48,8 @@ const Arrow = styled.span`
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 4px;
-  transform: ${(props) => (props.isOpen ? "rotate(-135deg)" : "rotate(45deg)")};
+  transform: ${(props) =>
+    props.$isOpen ? "rotate(-135deg)" : "rotate(45deg)"};
   transition: transform 0.3s;
   margin-left: 10px;
 `;
@@ -86,7 +87,7 @@ const Dropdown = ({
     <DropdownContainer ref={containerRef}>
       <DropdownHeader onClick={toggleOpen}>
         {selected ? selected.label || selected : placeholder}
-        <Arrow isOpen={isOpen} />
+        <Arrow $isOpen={isOpen} />
       </DropdownHeader>
       {isOpen && (
         <DropdownList>

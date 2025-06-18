@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import palette from "../../lib/styles/palette";
 
-const ToggleContainer = styled.button`
+const ToggleContainer = styled.div`
   width: 50px;
   height: 28px;
   background-color: ${(props) =>
-    props.isOn ? palette.colors.secondary : "#ccc"};
+    props.$isOn ? palette.colors.secondary : "#ccc"};
   border-radius: 999px;
   position: relative;
   cursor: pointer;
@@ -21,7 +21,7 @@ const ToggleCircle = styled.div`
   border-radius: 50%;
   position: absolute;
   top: 3px;
-  left: ${(props) => (props.isOn ? "25px" : "3px")};
+  left: ${(props) => (props.$isOn ? "25px" : "3px")};
   transition: left 0.3s;
 `;
 
@@ -35,8 +35,8 @@ const ToggleButton = ({ toggleIsOpen, setToggleIsOpen, isOpen }) => {
   };
 
   return (
-    <ToggleContainer isOn={toggleIsOpen} onClick={handleClick}>
-      <ToggleCircle isOn={toggleIsOpen} />
+    <ToggleContainer $isOn={toggleIsOpen} onClick={handleClick}>
+      <ToggleCircle $isOn={toggleIsOpen} />
     </ToggleContainer>
   );
 };

@@ -3,9 +3,7 @@ import Navbar from "../../components/common/Navbar";
 import { logout } from "../../modules/user";
 
 const HeaderContainer = () => {
-  const { user } = useSelector(({ user }) => ({
-    user: user.user,
-  }));
+  const user = useSelector((state) => state.user.user);
   const disptch = useDispatch();
   const onLogout = () => {
     disptch(logout());

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import palette from "../../lib/styles/palette";
 
-const StyledInput = styled.input`
+const StyledTextarea = styled.textarea`
   flex: 1;
   padding: 15px 15px;
   border: 1px solid #ccc;
@@ -13,6 +13,7 @@ const StyledInput = styled.input`
   box-sizing: border-box;
   font-family: inherit;
   width: 100%;
+  height: 250px;
 
   &:focus {
     border-color: ${palette.colors.primary};
@@ -31,9 +32,9 @@ const StyledInput = styled.input`
   `}
 `;
 
-const Input = ({ type = "text", value, onChange, placeholder, ...rest }) => {
+const Textarea = ({ type = "text", value, onChange, placeholder, ...rest }) => {
   return (
-    <StyledInput
+    <StyledTextarea
       type={type}
       value={value}
       onChange={onChange}
@@ -43,4 +44,4 @@ const Input = ({ type = "text", value, onChange, placeholder, ...rest }) => {
   );
 };
 
-export default Input;
+export default Textarea;

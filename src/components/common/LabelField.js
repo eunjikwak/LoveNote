@@ -13,7 +13,7 @@ const Container = styled.div`
 const Label = styled.label`
   font-weight: 600;
   font-size: 16px;
-  width: 100px;
+  width: 150px;
 `;
 
 const LabeledField = ({ label, children }) => {

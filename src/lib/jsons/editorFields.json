@@ -1,0 +1,448 @@
+{
+  "main": [
+    {
+      "label": "템플릿 타입",
+      "key": "selectedTemplate",
+      "type": "dropdown",
+      "props": {
+        "options": [
+          { "label": "Arial", "value": "Arial, sans-serif" },
+          { "label": "Courier New", "value": "'Courier New', monospace" },
+          { "label": "Georgia", "value": "Georgia, serif" },
+          { "label": "Verdana", "value": "Verdana, sans-serif" }
+        ],
+        "placeholder": "템플릿 타입을 선택하세요."
+      }
+    },
+    {
+      "label": "사진 선택",
+      "key": "photo",
+      "type": "button",
+      "props": {
+        "text": "사진 선택"
+      }
+    },
+    {
+      "label": "문구 입력",
+      "key": "wording",
+      "type": "input",
+      "props": {
+        "placeholder": "문구를 입력하세요"
+      }
+    },
+    {
+      "label": "문구 색상",
+      "key": "selectedColor",
+      "type": "color"
+    },
+    {
+      "label": "문구 위치",
+      "key": "position",
+      "type": "position"
+    }
+  ],
+  "groom": [
+    {
+      "label": "신랑",
+      "key": "groomName",
+      "type": "name",
+      "fields": [
+        {
+          "key": "groomLastName",
+          "placeholder": "성"
+        },
+        {
+          "key": "groomFirstName",
+          "placeholder": "이름"
+        }
+      ]
+    },
+    {
+      "label": "신랑 어머니",
+      "key": "groomMotherName",
+      "type": "name",
+      "fields": [
+        {
+          "key": "groomMotherLastName",
+          "placeholder": "성"
+        },
+        {
+          "key": "groomMotherFirstName",
+          "placeholder": "이름"
+        }
+      ]
+    },
+    {
+      "label": "신랑 아버지",
+      "key": "groomFatherName",
+      "type": "name",
+      "fields": [
+        {
+          "key": "groomFatherLastName",
+          "placeholder": "성"
+        },
+        {
+          "key": "groomFatherFirstName",
+          "placeholder": "이름"
+        }
+      ]
+    },
+    {
+      "label": "관계",
+      "key": "relation",
+      "type": "dropdown",
+      "props": {
+        "options": [
+          { "label": "장남", "value": "장남" },
+          { "label": "차남", "value": "차남" },
+          { "label": "삼남", "value": "삼남" },
+          { "label": "장녀", "value": "장녀" },
+          { "label": "차녀", "value": "차녀" },
+          { "label": "삼녀", "value": "삼녀" },
+          { "label": "아들", "value": "아들" },
+          { "label": "딸", "value": "딸" }
+        ],
+        "placeholder": "관계를 선택하세요."
+      }
+    }
+  ],
+  "bride": [
+    {
+      "label": "신부",
+      "key": "brideName",
+      "type": "name",
+      "fields": [
+        {
+          "key": "brideLastName",
+          "placeholder": "성"
+        },
+        {
+          "key": "brideFirstName",
+          "placeholder": "이름"
+        }
+      ]
+    },
+    {
+      "label": "신부 어머니",
+      "key": "brideMotherName",
+      "type": "name",
+      "fields": [
+        {
+          "key": "brideMotherLastName",
+          "placeholder": "성"
+        },
+        {
+          "key": "brideMotherFirstName",
+          "placeholder": "이름"
+        }
+      ]
+    },
+    {
+      "label": "신부 아버지",
+      "key": "brideFatherName",
+      "type": "name",
+      "fields": [
+        {
+          "key": "brideFatherLastName",
+          "placeholder": "성"
+        },
+        {
+          "key": "brideFatherFirstName",
+          "placeholder": "이름"
+        }
+      ]
+    },
+    {
+      "label": "관계",
+      "key": "relation",
+      "type": "dropdown",
+      "props": {
+        "options": [
+          { "label": "장남", "value": "장남" },
+          { "label": "차남", "value": "차남" },
+          { "label": "삼남", "value": "삼남" },
+          { "label": "장녀", "value": "장녀" },
+          { "label": "차녀", "value": "차녀" },
+          { "label": "삼녀", "value": "삼녀" },
+          { "label": "아들", "value": "아들" },
+          { "label": "딸", "value": "딸" }
+        ],
+        "placeholder": "관계를 선택하세요."
+      }
+    }
+  ],
+  "weddingHallInfo": [
+    {
+      "label": "예식장 명",
+      "key": "weddingName",
+      "type": "input",
+      "props": {
+        "placeholder": "ex)00예식장"
+      }
+    },
+    {
+      "label": "예식장 층과 홀",
+      "key": "weddingFloor",
+      "type": "input",
+      "props": {
+        "placeholder": "ex)0층 00홀"
+      }
+    },
+    {
+      "label": "전화번호",
+      "key": "weddingNumber",
+      "type": "input",
+      "props": {
+        "placeholder": "ex)010-1234-5678"
+      }
+    },
+    {
+      "label": "주소",
+      "key": "weddingAdress",
+      "type": "input",
+      "props": {
+        "placeholder": "ex)010-1234-5678"
+      }
+    },
+    {
+      "label": "예식 일자",
+      "key": "weddingDate",
+      "type": "date"
+    }
+  ],
+  "greeting": [
+    {
+      "label": "제목",
+      "key": "greetingTitle",
+      "type": "input",
+      "props": {
+        "placeholder": "제목을 입력하세요."
+      }
+    },
+    {
+      "label": "내용",
+      "key": "greetingMessage",
+      "type": "textarea",
+      "props": {
+        "placeholder": "내용을 입력하세요.",
+        "multiline": true
+      }
+    },
+    {
+      "label": "사진",
+      "key": "greetingImage",
+      "type": "button",
+      "props": {
+        "text": "사진 업로드"
+      }
+    }
+  ],
+  "coupleIntroduce": [
+    {
+      "label": "신랑 사진",
+      "key": "groomImage",
+      "type": "button",
+      "props": {
+        "text": "사진 선택"
+      }
+    },
+    {
+      "label": "신랑 소개",
+      "key": "groomIntroduce",
+      "type": "textarea",
+      "props": {
+        "placeholder": "내용을 입력하세요.",
+        "multiline": true
+      }
+    },
+    {
+      "label": "신부 사진",
+      "key": "brideImage",
+      "type": "button",
+      "props": {
+        "text": "사진 선택"
+      }
+    },
+    {
+      "label": "신부 소개",
+      "key": "brideIntroduce",
+      "type": "textarea",
+      "props": {
+        "placeholder": "내용을 입력하세요.",
+        "multiline": true
+      }
+    }
+  ],
+  "coupleContact": [
+    {
+      "label": "신랑 연락처",
+      "key": "groomNumber",
+      "type": "input",
+      "props": {
+        "placeholder": "ex)010-1234-5678"
+      }
+    },
+    {
+      "label": "신부 연락처",
+      "key": "brideNumber",
+      "type": "input",
+      "props": {
+        "placeholder": "ex)010-1234-5678"
+      }
+    }
+  ],
+  "parentsContact": [
+    {
+      "label": "신랑 아버지 연락처",
+      "key": "groomFatherPhone",
+      "type": "input",
+      "props": {
+        "placeholder": "예: 010-1234-5678",
+        "type": "tel"
+      }
+    },
+    {
+      "label": "신랑 어머니 연락처",
+      "key": "groomMotherPhone",
+      "type": "input",
+      "props": {
+        "placeholder": "예: 010-1234-5678",
+        "type": "tel"
+      }
+    },
+    {
+      "label": "신부 아버지 연락처",
+      "key": "brideFatherPhone",
+      "type": "input",
+      "props": {
+        "placeholder": "예: 010-1234-5678",
+        "type": "tel"
+      }
+    },
+    {
+      "label": "신부 어머니 연락처",
+      "key": "brideMotherPhone",
+      "type": "input",
+      "props": {
+        "placeholder": "예: 010-1234-5678",
+        "type": "tel"
+      }
+    }
+  ],
+  "moneyAccount": [
+    {
+      "label": "신랑",
+      "key": "groomAccount",
+      "type": "account",
+      "fields": [
+        { "key": "groomBank", "placeholder": "거래은행" },
+        { "key": "groomAccount", "placeholder": "계좌번호" },
+        { "key": "groomAccountHolder", "placeholder": "예금주" }
+      ]
+    },
+    {
+      "label": "신부",
+      "key": "brideAccount",
+      "type": "account",
+      "fields": [
+        { "key": "brideBank", "placeholder": "거래은행" },
+        { "key": "brideAccount", "placeholder": "계좌번호" },
+        { "key": "brideAccountHolder", "placeholder": "예금주" }
+      ]
+    },
+    {
+      "label": "신랑 아버지",
+      "key": "groomFatherAccount",
+      "type": "account",
+      "fields": [
+        { "key": "groomFatherBank", "placeholder": "거래은행" },
+        { "key": "groomFatherAccount", "placeholder": "계좌번호" },
+        { "key": "groomFatherAccountHolder", "placeholder": "예금주" }
+      ]
+    },
+    {
+      "label": "신랑 어머니",
+      "key": "groomMotherAccount",
+      "type": "account",
+      "fields": [
+        { "key": "groomMotherBank", "placeholder": "거래은행" },
+        { "key": "groomMotherAccount", "placeholder": "계좌번호" },
+        { "key": "groomMotherAccountHolder", "placeholder": "예금주" }
+      ]
+    },
+    {
+      "label": "신부 아버지",
+      "key": "brideFatherAccount",
+      "type": "account",
+      "fields": [
+        { "key": "brideFatherBank", "placeholder": "거래은행" },
+        { "key": "brideFatherAccount", "placeholder": "계좌번호" },
+        { "key": "brideFatherAccountHolder", "placeholder": "예금주" }
+      ]
+    },
+    {
+      "label": "신부 어머니",
+      "key": "brideMotherAccount",
+      "type": "account",
+      "fields": [
+        { "key": "brideMotherBank", "placeholder": "거래은행" },
+        { "key": "brideMotherAccount", "placeholder": "계좌번호" },
+        { "key": "brideMotherAccountHolder", "placeholder": "예금주" }
+      ]
+    }
+  ],
+  "weddingSchedule": [
+    {
+      "label": "제목",
+      "key": "weddingScheduleTitle",
+      "type": "input",
+      "props": {
+        "placeholder": "제목을 입력하세요."
+      }
+    },
+    {
+      "label": "내용",
+      "key": "weddingScheduleMessage",
+      "type": "textarea",
+      "props": {
+        "placeholder": "내용을 입력하세요.",
+        "multiline": true
+      }
+    },
+    {
+      "label": "사진",
+      "key": "weddingScheduleImage",
+      "type": "button",
+      "props": {
+        "text": "사진 업로드"
+      }
+    }
+  ],
+  "receptionGuide": [
+    {
+      "label": "제목",
+      "key": "eceptionGuideTitle",
+      "type": "input",
+      "props": {
+        "placeholder": "제목을 입력하세요."
+      }
+    },
+    {
+      "label": "내용",
+      "key": "eceptionGuideMessage",
+      "type": "textarea",
+      "props": {
+        "placeholder": "내용을 입력하세요.",
+        "multiline": true
+      }
+    },
+    {
+      "label": "사진",
+      "key": "eceptionGuideImage",
+      "type": "button",
+      "props": {
+        "text": "사진 업로드"
+      }
+    }
+  ]
+}
