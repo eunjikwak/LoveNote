@@ -15,10 +15,10 @@ const RegisterForm = () => {
   }));
   const onChange = (e) => {
     const { value, name } = e.target;
-    dispatch(changeField({ from: "register", key: name, value }));
+    dispatch(changeField({ form: "register", key: name, value }));
   };
   const onSubmit = (e) => {
-    e.preventDafault();
+    e.preventDefault();
     const { username, password, passwordConfirm } = form;
     if ([username, password, passwordConfirm].includes("")) {
       setError("빈칸을 모두 입력하세요.");
